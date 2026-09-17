@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>🎓 EduManage</h2>
+
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#students">Students</a>
+                <a href="#teachers">Teachers</a>
+                <a href="#classes">Classes</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header>
+                <h1>School Management System</h1>
+                <p>Manage your school easily and efficiently.</p>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Total Students</h3>
+                        <p id="studentCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Teachers</h3>
+                        <p>25</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Classes</h3>
+                        <p>12</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Attendance</h3>
+                        <p>92%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Students -->
+            <section id="students">
+                <h2>Student Management</h2>
+
+                <div class="form-container">
+                    <input type="text" id="studentName" placeholder="Student name">
+                    <input type="text" id="studentClass" placeholder="Class">
+                    <input type="email" id="studentEmail" placeholder="Email">
+
+                    <button onclick="addStudent()">Add Student</button>
+                </div>
+
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search students..."
+                    onkeyup="searchStudents()"
+                    class="search"
+                >
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Teachers -->
+            <section id="teachers">
+                <h2>Teachers</h2>
+                <p>Our school currently has <strong>25 teachers</strong>.</p>
+            </section>
+
+            <!-- Classes -->
+            <section id="classes">
+                <h2>Classes</h2>
+                <p>There are <strong>12 classes</strong> in the school.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
